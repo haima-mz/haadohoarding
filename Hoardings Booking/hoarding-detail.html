@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edappally Flyover, Westbound — BigFlex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">BIG<span>FLEX</span></div>
+    <div class="navlinks">
+      <a href="browse.html">Browse hoardings</a>
+      <a href="index.html#how">How it works</a>
+      <a href="#">For vendors</a>
+    </div>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-primary" href="signup.html">Sign up</a>
+    </div>
+  </nav>
+</header>
+
+<section class="section" style="padding-top:32px;">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="browse.html">Browse</a> / Edappally Flyover, Westbound</div>
+
+    <div class="detail-grid">
+      <div>
+        <div class="gallery-main">
+          <img id="mainImg" src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=900&h=560&fit=crop" alt="Edappally Flyover hoarding, main view">
+        </div>
+        <div class="gallery-thumbs">
+          <img class="active" src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=200&h=140&fit=crop" alt="View 1">
+          <img src="https://images.unsplash.com/photo-1567521463950-4f3ea7e9a93e?w=200&h=140&fit=crop" alt="View 2">
+          <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=200&h=140&fit=crop" alt="View 3">
+          <img src="https://images.unsplash.com/photo-1551361415-69c87624334f?w=200&h=140&fit=crop" alt="View 4">
+        </div>
+
+        <div style="margin-top:32px;">
+          <div class="detail-title"><h1>Edappally Flyover, Westbound</h1></div>
+          <div class="detail-loc">Edappally, Kochi, Kerala &middot; Hoarding &middot; 40ft &times; 20ft</div>
+
+          <div class="detail-stats-grid">
+            <div class="dstat"><div class="num">55,200</div><div class="lbl">Daily travellers</div></div>
+            <div class="dstat"><div class="num">71%</div><div class="lbl">Viewing ratio</div></div>
+            <div class="dstat"><div class="num">40 &times; 20 ft</div><div class="lbl">Size</div></div>
+            <div class="dstat"><div class="num">Westbound</div><div class="lbl">Facing direction</div></div>
+          </div>
+
+          <p class="detail-desc">
+            Positioned directly facing westbound traffic exiting the Edappally flyover, one of Kochi's busiest junctions
+            connecting NH-66 to the city centre. High dwell time at the signal below means strong visibility for
+            slow-moving and stationary traffic, not just passing vehicles. Illuminated for night visibility.
+          </p>
+
+          <div class="vendor-card">
+            <div class="vendor-avatar">RK</div>
+            <div>
+              <div class="vendor-name">Ravi Outdoor Media</div>
+              <div class="vendor-sub">Verified vendor &middot; 18 active hoardings</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="price-box">
+          <div class="amount" id="totalAmount">₹18,000</div>
+          <div class="per">for 1 month booking</div>
+        </div>
+        <div class="duration-row">
+          <label for="durationSelect">Extend duration</label>
+          <select id="durationSelect">
+            <option value="1">1 month (minimum)</option>
+            <option value="2">2 months</option>
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+            <option value="12">12 months</option>
+          </select>
+        </div>
+        <div class="booking-range" id="bookingRange">Select a start date on the calendar to see your booking range.</div>
+
+        <div class="cal-card">
+          <div class="cal-head">
+            <h4 id="calMonthLabel">—</h4>
+            <div class="cal-nav">
+              <button id="prevMonth" aria-label="Previous month">&lsaquo;</button>
+              <button id="nextMonth" aria-label="Next month">&rsaquo;</button>
+            </div>
+          </div>
+          <div class="cal-legend">
+            <span><span class="legend-dot" style="background:#F0997B;"></span>Booked</span>
+            <span><span class="legend-dot" style="background:#FFE9A8;"></span>Selected</span>
+            <span><span class="legend-dot" style="background:#16181D;"></span>Start</span>
+          </div>
+          <div class="dow">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+          </div>
+          <div class="days" id="calDays"></div>
+        </div>
+
+        <a class="btn btn-primary" style="width:100%;text-align:center;margin-top:18px;" href="#" id="payBtn">Continue to payment</a>
+        <p style="font-size:12px;color:#8A8A82;margin-top:10px;text-align:center;">You'll upload your display creative and pay via Razorpay on the next step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">BIG<span>FLEX</span></div>
+        <p style="font-size:13px;max-width:240px;">Roadside hoarding space, booked online across Kerala.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Platform</h5>
+          <a href="browse.html">Browse hoardings</a>
+          <a href="index.html#how">How it works</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="foot-col">
+          <h5>For vendors</h5>
+          <a href="#">List your hoarding</a>
+          <a href="#">Vendor login</a>
+        </div>
+        <div class="foot-col">
+          <h5>Support</h5>
+          <a href="#">Contact us</a>
+          <a href="#">Help centre</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 BigFlex. All rights reserved.</span>
+      <span>Payments secured by Razorpay</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.gallery-thumbs img').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      document.getElementById('mainImg').src = thumb.src.replace('w=200&h=140', 'w=900&h=560');
+      document.querySelectorAll('.gallery-thumbs img').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+
+  const bookedRanges = [
+    { start: '2026-07-05', end: '2026-07-18' },
+    { start: '2026-08-01', end: '2026-08-10' }
+  ];
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  let viewYear = 2026, viewMonth = 6;
+  let selectedStart = null, selectedEnd = null;
+  const pricePerMonth = 18000;
+
+  function toISO(y,m,d){ return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`; }
+  function isBooked(dateStr){ return bookedRanges.some(r => dateStr >= r.start && dateStr <= r.end); }
+  function rangeHasClash(startStr, endStr){ return bookedRanges.some(r => !(endStr < r.start || startStr > r.end)); }
+  function addMonths(dateStr, months){
+    const d = new Date(dateStr + 'T00:00:00');
+    d.setMonth(d.getMonth() + months);
+    d.setDate(d.getDate() - 1);
+    return d.toISOString().slice(0,10);
+  }
+
+  function renderCalendar(){
+    document.getElementById('calMonthLabel').textContent = `${monthNames[viewMonth]} ${viewYear}`;
+    const daysEl = document.getElementById('calDays');
+    daysEl.innerHTML = '';
+    const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    const totalDays = new Date(viewYear, viewMonth + 1, 0).getDate();
+    for (let i = 0; i < firstDay; i++){
+      const empty = document.createElement('div'); empty.className = 'day empty'; daysEl.appendChild(empty);
+    }
+    for (let d = 1; d <= totalDays; d++){
+      const dateStr = toISO(viewYear, viewMonth, d);
+      const cell = document.createElement('div');
+      cell.className = 'day'; cell.textContent = d;
+      if (isBooked(dateStr)){
+        cell.classList.add('booked');
+      } else {
+        if (selectedStart && dateStr === selectedStart) cell.classList.add('selected');
+        else if (selectedStart && selectedEnd && dateStr > selectedStart && dateStr <= selectedEnd) cell.classList.add('in-range');
+        cell.addEventListener('click', () => selectStartDate(dateStr));
+      }
+      daysEl.appendChild(cell);
+    }
+  }
+
+  function selectStartDate(dateStr){
+    const months = parseInt(document.getElementById('durationSelect').value, 10);
+    const endStr = addMonths(dateStr, months);
+    if (rangeHasClash(dateStr, endStr)){
+      document.getElementById('bookingRange').innerHTML = `<b>That range overlaps an existing booking.</b> Pick a different start date or a shorter duration.`;
+      selectedStart = null; selectedEnd = null; renderCalendar(); return;
+    }
+    selectedStart = dateStr; selectedEnd = endStr;
+    updateSummary(); renderCalendar();
+  }
+
+  function updateSummary(){
+    if (!selectedStart){ document.getElementById('bookingRange').textContent = 'Select a start date on the calendar to see your booking range.'; return; }
+    const months = parseInt(document.getElementById('durationSelect').value, 10);
+    const total = pricePerMonth * months;
+    document.getElementById('totalAmount').textContent = '₹' + total.toLocaleString('en-IN');
+    document.querySelector('.price-box .per').textContent = `for ${months} month${months > 1 ? 's' : ''} booking`;
+    document.getElementById('bookingRange').innerHTML = `Booking from <b>${selectedStart}</b> to <b>${selectedEnd}</b> (${months} month${months > 1 ? 's' : ''})`;
+  }
+
+  document.getElementById('durationSelect').addEventListener('change', () => { if (selectedStart) selectStartDate(selectedStart); });
+  document.getElementById('prevMonth').addEventListener('click', () => { viewMonth--; if (viewMonth < 0){ viewMonth = 11; viewYear--; } renderCalendar(); });
+  document.getElementById('nextMonth').addEventListener('click', () => { viewMonth++; if (viewMonth > 11){ viewMonth = 0; viewYear++; } renderCalendar(); });
+
+  renderCalendar();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — BigFlex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">BIG<span>FLEX</span></a>
+    <div class="navlinks">
+      <a href="browse.html">Browse hoardings</a>
+      <a href="index.html#how">How it works</a>
+      <a href="#">For vendors</a>
+    </div>
+    <div class="navcta">
+      <a class="btn btn-primary" href="signup.html">Sign up</a>
+    </div>
+  </nav>
+</header>
+
+<div class="auth-wrap">
+  <div class="auth-side">
+    <div class="eyebrow">Welcome back</div>
+    <h2>Your next campaign<br>is one login away.</h2>
+    <p>Track your active bookings, manage upcoming creatives, and book new hoardings in minutes.</p>
+    <div class="auth-stats">
+      <div class="auth-stat"><div class="num">142</div><div class="lbl">Live hoardings</div></div>
+      <div class="auth-stat"><div class="num">4 cities</div><div class="lbl">Across Kerala</div></div>
+      <div class="auth-stat"><div class="num">1 month</div><div class="lbl">Minimum booking</div></div>
+    </div>
+  </div>
+
+  <div class="auth-form-side">
+    <div class="auth-form">
+      <h3>Log in</h3>
+      <p class="sub">Enter your phone number and password to continue.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field" id="phoneField">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" placeholder="98765 43210" maxlength="10">
+          <div class="field-error">Enter a valid 10-digit phone number.</div>
+        </div>
+
+        <div class="field" id="passwordField">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+          <div class="field-error">Password is required.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary auth-submit">Log in</button>
+      </form>
+
+      <p class="auth-switch">New to BigFlex? <a href="signup.html">Create an account</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    let valid = true;
+
+    const phone = document.getElementById('phone').value.trim();
+    const phoneField = document.getElementById('phoneField');
+    if (!/^[6-9]\d{9}$/.test(phone)){
+      phoneField.classList.add('invalid'); valid = false;
+    } else {
+      phoneField.classList.remove('invalid');
+    }
+
+    const password = document.getElementById('password').value;
+    const passwordField = document.getElementById('passwordField');
+    if (password.length < 1){
+      passwordField.classList.add('invalid'); valid = false;
+    } else {
+      passwordField.classList.remove('invalid');
+    }
+
+    if (valid){
+      window.location.href = 'browse.html';
+    }
+  });
+</script>
+
+</body>
+</html>

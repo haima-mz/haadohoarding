@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Payments — BigFlex Vendor</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/brand-override.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-text mx-3">BIG<span class="hl">FLEX</span></div>
+            </a>
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Hoardings</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="hoardings.html">
+                    <i class="fas fa-fw fa-images"></i>
+                    <span>My hoardings</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="add-hoarding.html">
+                    <i class="fas fa-fw fa-plus-circle"></i>
+                    <span>Add hoarding</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Account</div>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="payments.html">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Payments</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="profile.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Profile</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="font-weight-bold text-gray-800 d-none d-sm-inline-block">Payments</span>
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ravi Outdoor Media</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profile.html"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <h1 class="h3 mb-4 text-gray-800">Payments</h1>
+
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-gray-800">Pay listing fee</h6></div>
+                                <div class="card-body">
+                                    <p class="small text-muted">Thrissur Round, East Side &mdash; this hoarding stays hidden from advertisers until the listing fee is paid and admin approves it.</p>
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                        <span class="small">Hoarding listing fee</span>
+                                        <span class="font-weight-bold">&#8377;1,000.00</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center py-3 mb-3">
+                                        <span class="font-weight-bold">Total payable</span>
+                                        <span class="font-weight-bold h5 mb-0">&#8377;1,000.00</span>
+                                    </div>
+                                    <button id="rzpButton" class="btn btn-primary btn-block">
+                                        <i class="fas fa-lock fa-sm mr-1"></i> Pay &#8377;1,000 with Razorpay
+                                    </button>
+                                    <p class="small text-muted mt-3 mb-0">After payment, your hoarding moves to <b>pending review</b>. Admin manually verifies the payment and listing details before making it visible to advertisers.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-gray-800">Payment history</h6></div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="text-xs text-uppercase text-gray-500">
+                                                <tr><th>Hoarding</th><th>Amount</th><th>Date</th><th>Status</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Edappally Flyover, Westbound</td>
+                                                    <td>&#8377;1,000.00</td>
+                                                    <td>12 Jun 2026</td>
+                                                    <td><span class="badge badge-bf-paid">Paid</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NH-66 Bypass, Vyttila Side</td>
+                                                    <td>&#8377;1,000.00</td>
+                                                    <td>18 Jun 2026</td>
+                                                    <td><span class="badge badge-bf-paid">Paid</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kakkanad Junction, SBT Side</td>
+                                                    <td>&#8377;1,000.00</td>
+                                                    <td>22 Jun 2026</td>
+                                                    <td><span class="badge badge-bf-paid">Paid</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; 2026 BigFlex Vendor Portal</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        // ---------------------------------------------------------------
+        // Razorpay checkout — front-end trigger only.
+        // The order_id below must come from your PHP backend, which calls
+        // Razorpay Orders API server-side using your key_secret. Never put
+        // the key_secret in front-end code. On success, verify the payment
+        // signature server-side before marking listing_fee_status = 'paid'.
+        // ---------------------------------------------------------------
+        document.getElementById('rzpButton').addEventListener('click', function(){
+            const options = {
+                key: 'RAZORPAY_KEY_ID',
+                amount: 100000,
+                currency: 'INR',
+                name: 'BigFlex',
+                description: 'Hoarding listing fee — Thrissur Round, East Side',
+                order_id: 'ORDER_ID_FROM_YOUR_PHP_BACKEND',
+                handler: function(response){
+                    // send response.razorpay_payment_id, razorpay_order_id,
+                    // razorpay_signature to your PHP verify endpoint here
+                    window.location.href = 'hoardings.html';
+                },
+                prefill: { name: 'Ravi Outdoor Media', email: 'vendor@example.com', contact: '9876543210' },
+                theme: { color: '#FFC700' }
+            };
+            const rzp = new Razorpay(options);
+            rzp.open();
+        });
+    </script>
+
+</body>
+</html>

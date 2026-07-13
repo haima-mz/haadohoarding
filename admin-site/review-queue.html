@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Review queue — BigFlex Admin</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/brand-override.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-text mx-3">BIG<span class="hl">FLEX</span></div>
+            </a>
+            <div class="text-center small text-white-50 mb-2" style="margin-top:-8px;">Admin panel</div>
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Hoardings</div>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="review-queue.html">
+                    <i class="fas fa-fw fa-clipboard-check"></i>
+                    <span>Review queue</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="all-hoardings.html">
+                    <i class="fas fa-fw fa-images"></i>
+                    <span>All hoardings</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">People</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="vendors.html">
+                    <i class="fas fa-fw fa-store"></i>
+                    <span>Vendors</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="end-users.html">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>End users</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Finance</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="payments.html">
+                    <i class="fas fa-fw fa-rupee-sign"></i>
+                    <span>Payments and revenue</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="bookings.html">
+                    <i class="fas fa-fw fa-calendar-check"></i>
+                    <span>Bookings</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="font-weight-bold text-gray-800 d-none d-sm-inline-block">Review queue</span>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <span class="badge badge-danger badge-counter">3</span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">3 hoardings awaiting review</h6>
+                                <a class="dropdown-item small" href="review-queue.html">NH-66 Bypass, Vyttila Side &mdash; paid, awaiting approval</a>
+                                <a class="dropdown-item small" href="review-queue.html">Beach Road, Kozhikode &mdash; paid, awaiting approval</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="review-queue.html">View review queue</a>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <h1 class="h3 mb-4 text-gray-800">Review queue</h1>
+                    <p class="text-muted small mb-4">These hoardings have paid the &#8377;1,000 listing fee and are waiting on your manual review. Approve to make them visible to advertisers, or reject with a reason.</p>
+
+                    <div class="card shadow mb-4" id="reviewList">
+
+                        <div class="card-body border-bottom" data-row>
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=160&h=110&fit=crop" class="rounded" style="width:100%;object-fit:cover;height:64px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="font-weight-bold">NH-66 Bypass, Vyttila Side</div>
+                                    <div class="small text-muted">Kochi, Kerala &middot; 30ft &times; 15ft &middot; Vendor: Ravi Outdoor Media</div>
+                                </div>
+                                <div class="col-md-2"><span class="badge badge-bf-paid">Paid &#8377;1,000</span></div>
+                                <div class="col-md-4 text-md-right">
+                                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#detailModal">View details</button>
+                                    <button class="btn btn-sm btn-success" data-action="approve">Approve</button>
+                                    <button class="btn btn-sm btn-outline-danger" data-action="reject">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body border-bottom" data-row>
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=160&h=110&fit=crop" class="rounded" style="width:100%;object-fit:cover;height:64px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="font-weight-bold">Beach Road, Kozhikode</div>
+                                    <div class="small text-muted">Kozhikode, Kerala &middot; 25ft &times; 14ft &middot; Vendor: Coastal Media Co.</div>
+                                </div>
+                                <div class="col-md-2"><span class="badge badge-bf-paid">Paid &#8377;1,000</span></div>
+                                <div class="col-md-4 text-md-right">
+                                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#detailModal">View details</button>
+                                    <button class="btn btn-sm btn-success" data-action="approve">Approve</button>
+                                    <button class="btn btn-sm btn-outline-danger" data-action="reject">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body" data-row>
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <img src="https://images.unsplash.com/photo-1551361415-69c87624334f?w=160&h=110&fit=crop" class="rounded" style="width:100%;object-fit:cover;height:64px;">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="font-weight-bold">Palayam Junction, EW Facing</div>
+                                    <div class="small text-muted">Trivandrum, Kerala &middot; 22ft &times; 12ft &middot; Vendor: Trivandrum Ads Pvt Ltd</div>
+                                </div>
+                                <div class="col-md-2"><span class="badge badge-bf-paid">Paid &#8377;1,000</span></div>
+                                <div class="col-md-4 text-md-right">
+                                    <button class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#detailModal">View details</button>
+                                    <button class="btn btn-sm btn-success" data-action="approve">Approve</button>
+                                    <button class="btn btn-sm btn-outline-danger" data-action="reject">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="emptyState" class="text-center text-muted py-5 d-none">
+                        <i class="fas fa-check-circle fa-2x mb-2"></i>
+                        <div>Review queue is clear. Nothing waiting on you right now.</div>
+                    </div>
+
+                    <!-- Detail modal -->
+                    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">NH-66 Bypass, Vyttila Side</h5>
+                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=700&h=350&fit=crop" class="img-fluid rounded mb-3">
+                                    <div class="row small">
+                                        <div class="col-md-6 mb-2"><b>Vendor:</b> Ravi Outdoor Media</div>
+                                        <div class="col-md-6 mb-2"><b>Listing fee:</b> Paid &middot; 18 Jun 2026</div>
+                                        <div class="col-md-6 mb-2"><b>Location:</b> NH-66 Bypass, Vyttila, Kochi</div>
+                                        <div class="col-md-6 mb-2"><b>Size:</b> 30ft &times; 15ft</div>
+                                        <div class="col-md-6 mb-2"><b>Daily travellers:</b> 61,500</div>
+                                        <div class="col-md-6 mb-2"><b>Viewing ratio:</b> 64%</div>
+                                        <div class="col-md-6 mb-2"><b>Price per month:</b> &#8377;24,500</div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label class="small font-weight-bold">Remarks (optional, visible to vendor)</label>
+                                        <textarea class="form-control" rows="2" placeholder="e.g. Please re-upload a clearer photo of the structure"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline-danger" data-dismiss="modal">Reject</button>
+                                    <button class="btn btn-success" data-dismiss="modal">Approve and publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; 2026 BigFlex Admin Panel</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+        document.querySelectorAll('[data-action]').forEach(btn => {
+            btn.addEventListener('click', function(){
+                const row = btn.closest('[data-row]');
+                row.style.transition = 'opacity 0.2s';
+                row.style.opacity = '0';
+                setTimeout(() => {
+                    row.remove();
+                    if (document.querySelectorAll('[data-row]').length === 0){
+                        document.getElementById('emptyState').classList.remove('d-none');
+                    }
+                }, 200);
+            });
+        });
+    </script>
+
+</body>
+</html>

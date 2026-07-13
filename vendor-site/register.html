@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vendor registration — BigFlex</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/brand-override.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                            <div class="col-lg-7">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <div class="sidebar-brand-text" style="color:#16181D; font-size:22px;">BIG<span class="hl">FLEX</span></div>
+                                        <h1 class="h4 text-gray-900 mb-2 mt-2">Create a vendor account</h1>
+                                        <p class="text-muted small">List your hoardings and reach advertisers directly. A one-time fee of &#8377;1,000 applies per hoarding listing.</p>
+                                    </div>
+                                    <form class="user" id="vendorRegForm" novalidate>
+                                        <div class="form-row">
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control form-control-user" id="name" placeholder="Full name">
+                                                <div class="small text-danger mt-1 d-none" data-err="name">Enter your name.</div>
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="text" class="form-control form-control-user" id="company" placeholder="Company name (optional)">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="email" class="form-control form-control-user" id="email" placeholder="Email address">
+                                                <div class="small text-danger mt-1 d-none" data-err="email">Enter a valid email address.</div>
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="tel" maxlength="10" class="form-control form-control-user" id="phone" placeholder="Phone number">
+                                                <div class="small text-danger mt-1 d-none" data-err="phone">Enter a valid 10-digit phone number.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                                                <div class="small text-danger mt-1 d-none" data-err="password">At least 8 characters.</div>
+                                            </div>
+                                            <div class="col-sm-6 mb-3">
+                                                <input type="password" class="form-control form-control-user" id="confirm" placeholder="Confirm password">
+                                                <div class="small text-danger mt-1 d-none" data-err="confirm">Passwords don't match.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" id="address" placeholder="Business address / city">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Create account
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="login.html">Already have a vendor account? Log in</a>
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <a class="small text-muted" href="../index.html">&larr; Back to BigFlex</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        function showErr(id, show){
+            const el = document.querySelector(`[data-err="${id}"]`);
+            if (el) el.classList.toggle('d-none', !show);
+        }
+        document.getElementById('vendorRegForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            let valid = true;
+
+            const name = document.getElementById('name').value.trim();
+            showErr('name', name.length < 2); if (name.length < 2) valid = false;
+
+            const email = document.getElementById('email').value.trim();
+            const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            showErr('email', !emailOk); if (!emailOk) valid = false;
+
+            const phone = document.getElementById('phone').value.trim();
+            const phoneOk = /^[6-9]\d{9}$/.test(phone);
+            showErr('phone', !phoneOk); if (!phoneOk) valid = false;
+
+            const password = document.getElementById('password').value;
+            showErr('password', password.length < 8); if (password.length < 8) valid = false;
+
+            const confirm = document.getElementById('confirm').value;
+            const confirmOk = confirm === password && confirm.length >= 8;
+            showErr('confirm', !confirmOk); if (!confirmOk) valid = false;
+
+            if (valid){ window.location.href = 'dashboard.html'; }
+        });
+    </script>
+
+</body>
+</html>

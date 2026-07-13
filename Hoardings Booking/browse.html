@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse hoardings — BigFlex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">BIG<span>FLEX</span></div>
+    <div class="navlinks">
+      <a href="browse.html">Browse hoardings</a>
+      <a href="index.html#how">How it works</a>
+      <a href="#">For vendors</a>
+    </div>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="login.html">Log in</a>
+      <a class="btn btn-primary" href="signup.html">Sign up</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="section-eyebrow">142 live hoardings</div>
+    <h1>Browse hoardings</h1>
+    <p>Filter by city, traffic count, size, and budget to find the spot that fits your campaign.</p>
+  </div>
+</section>
+
+<div class="roadline"></div>
+
+<section class="section" style="padding:48px 0 88px;">
+  <div class="wrap browse-layout">
+
+    <aside class="filter-panel">
+      <h4>Filters</h4>
+
+      <div class="filter-group">
+        <label>City</label>
+        <div class="filter-check"><input type="checkbox" id="f-kochi" checked><label for="f-kochi">Kochi (58)</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-thr"><label for="f-thr">Thrissur (24)</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-koz"><label for="f-koz">Kozhikode (31)</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-tvm"><label for="f-tvm">Trivandrum (29)</label></div>
+      </div>
+
+      <div class="filter-group">
+        <label>Hoarding type</label>
+        <div class="filter-check"><input type="checkbox" id="f-hoarding" checked><label for="f-hoarding">Hoarding</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-unipole"><label for="f-unipole">Unipole</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-gantry"><label for="f-gantry">Gantry</label></div>
+        <div class="filter-check"><input type="checkbox" id="f-screen"><label for="f-screen">Digital screen</label></div>
+      </div>
+
+      <div class="filter-group">
+        <label>Monthly budget — up to <span id="budgetVal">₹30,000</span></label>
+        <input type="range" min="5000" max="50000" step="1000" value="30000" id="budgetSlider">
+        <div class="range-row"><span>₹5,000</span><span>₹50,000</span></div>
+      </div>
+
+      <div class="filter-group">
+        <label>Minimum daily travellers</label>
+        <select>
+          <option>Any</option>
+          <option>10,000+</option>
+          <option>25,000+</option>
+          <option>50,000+</option>
+        </select>
+      </div>
+
+      <a class="btn btn-primary" style="width:100%;text-align:center;" href="#">Apply filters</a>
+    </aside>
+
+    <div>
+      <div class="results-bar">
+        <span>Showing 1–9 of 142 hoardings</span>
+        <select class="sort-select">
+          <option>Sort: Most viewed</option>
+          <option>Sort: Price — low to high</option>
+          <option>Sort: Price — high to low</option>
+          <option>Sort: Most travellers</option>
+        </select>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=500&h=320&fit=crop" alt="Hoarding at Edappally flyover">
+            <span class="status-tag available">Available</span>
+            <span class="card-price">₹18,000/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>Edappally Flyover, Westbound</h3>
+            <div class="card-loc">Kochi, Kerala &middot; 40ft &times; 20ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">55.2K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">71%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=500&h=320&fit=crop" alt="Hoarding on NH-66 bypass">
+            <span class="status-tag few">3 dates left</span>
+            <span class="card-price">₹24,500/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>NH-66 Bypass, Vyttila Side</h3>
+            <div class="card-loc">Kochi, Kerala &middot; 30ft &times; 15ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">61.5K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">64%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1551361415-69c87624334f?w=500&h=320&fit=crop" alt="Hoarding near Kakkanad junction">
+            <span class="status-tag available">Available</span>
+            <span class="card-price">₹12,000/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>Kakkanad Junction, SBT Side</h3>
+            <div class="card-loc">Kochi, Kerala &middot; 20ft &times; 10ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">28.9K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">58%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=500&h=320&fit=crop" alt="Hoarding at MG Road">
+            <span class="status-tag available">Available</span>
+            <span class="card-price">₹21,000/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>MG Road, Opp. Lulu Mall</h3>
+            <div class="card-loc">Kochi, Kerala &middot; 35ft &times; 18ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">42.0K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">68%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&h=320&fit=crop" alt="Hoarding at Thrissur round">
+            <span class="status-tag available">Available</span>
+            <span class="card-price">₹9,500/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>Thrissur Round, East Side</h3>
+            <div class="card-loc">Thrissur, Kerala &middot; 20ft &times; 12ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">19.4K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">55%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="hoarding-detail.html">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=320&fit=crop" alt="Hoarding at Kozhikode beach road">
+            <span class="status-tag few">2 dates left</span>
+            <span class="card-price">₹16,000/mo</span>
+          </div>
+          <div class="card-body">
+            <h3>Beach Road, Kozhikode</h3>
+            <div class="card-loc">Kozhikode, Kerala &middot; 25ft &times; 14ft</div>
+            <div class="card-stats">
+              <div><div class="stat-num">33.7K</div><div class="stat-label">Daily travellers</div></div>
+              <div><div class="stat-num">62%</div><div class="stat-label">Viewing ratio</div></div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="pagination">
+        <div class="page-btn active">1</div>
+        <div class="page-btn">2</div>
+        <div class="page-btn">3</div>
+        <div class="page-btn">&rsaquo;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">BIG<span>FLEX</span></div>
+        <p style="font-size:13px;max-width:240px;">Roadside hoarding space, booked online across Kerala.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Platform</h5>
+          <a href="browse.html">Browse hoardings</a>
+          <a href="index.html#how">How it works</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="foot-col">
+          <h5>For vendors</h5>
+          <a href="#">List your hoarding</a>
+          <a href="#">Vendor login</a>
+        </div>
+        <div class="foot-col">
+          <h5>Support</h5>
+          <a href="#">Contact us</a>
+          <a href="#">Help centre</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 BigFlex. All rights reserved.</span>
+      <span>Payments secured by Razorpay</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('budgetSlider').addEventListener('input', (e) => {
+    document.getElementById('budgetVal').textContent = '₹' + Number(e.target.value).toLocaleString('en-IN');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard — BigFlex Vendor</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/brand-override.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-text mx-3">BIG<span class="hl">FLEX</span></div>
+            </a>
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Hoardings</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="hoardings.html">
+                    <i class="fas fa-fw fa-images"></i>
+                    <span>My hoardings</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="add-hoarding.html">
+                    <i class="fas fa-fw fa-plus-circle"></i>
+                    <span>Add hoarding</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Account</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="payments.html">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Payments</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="profile.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Profile</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="font-weight-bold text-gray-800 d-none d-sm-inline-block">Vendor dashboard</span>
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ravi Outdoor Media</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profile.html"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Vendor dashboard</h1>
+                        <a href="add-hoarding.html" class="d-none d-sm-inline-block btn btn-primary shadow-sm">
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add hoarding
+                        </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total hoardings</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-images fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Live and visible</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-check-circle fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending admin review</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-hourglass-half fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Active bookings</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">9</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-calendar-check fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-gray-800">Recent hoardings</h6>
+                                    <a href="hoardings.html" class="small">View all &rarr;</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless align-middle mb-0">
+                                            <thead>
+                                                <tr class="text-xs text-uppercase text-gray-500">
+                                                    <th>Hoarding</th><th>City</th><th>Listing fee</th><th>Visibility</th><th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-weight-bold">Edappally Flyover, Westbound</td>
+                                                    <td>Kochi</td>
+                                                    <td><span class="badge badge-bf-paid">Paid</span></td>
+                                                    <td><span class="badge badge-bf-approved">Approved</span></td>
+                                                    <td><a href="hoardings.html" class="small">Manage</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-weight-bold">NH-66 Bypass, Vyttila Side</td>
+                                                    <td>Kochi</td>
+                                                    <td><span class="badge badge-bf-paid">Paid</span></td>
+                                                    <td><span class="badge badge-bf-pending">Pending review</span></td>
+                                                    <td><a href="hoardings.html" class="small">Manage</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-weight-bold">Thrissur Round, East Side</td>
+                                                    <td>Thrissur</td>
+                                                    <td><span class="badge badge-bf-unpaid">Unpaid</span></td>
+                                                    <td><span class="badge badge-bf-pending">Awaiting payment</span></td>
+                                                    <td><a href="payments.html" class="small text-danger">Pay now</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-gray-800">Next steps</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="small">You have <b>1 hoarding</b> with an unpaid listing fee of &#8377;1,000. It won't be visible to advertisers until payment is complete and admin approves it.</p>
+                                    <a href="payments.html" class="btn btn-primary btn-sm btn-block">Pay listing fee</a>
+                                    <hr>
+                                    <p class="small mb-0">You have <b>1 hoarding</b> awaiting admin review after payment. This is usually reviewed within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; 2026 BigFlex Vendor Portal</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+</html>

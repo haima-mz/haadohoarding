@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Payments and revenue — BigFlex Admin</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/brand-override.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-text mx-3">BIG<span class="hl">FLEX</span></div>
+            </a>
+            <div class="text-center small text-white-50 mb-2" style="margin-top:-8px;">Admin panel</div>
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Hoardings</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="review-queue.html">
+                    <i class="fas fa-fw fa-clipboard-check"></i>
+                    <span>Review queue</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="all-hoardings.html">
+                    <i class="fas fa-fw fa-images"></i>
+                    <span>All hoardings</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">People</div>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="vendors.html">
+                    <i class="fas fa-fw fa-store"></i>
+                    <span>Vendors</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="end-users.html">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>End users</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Finance</div>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="payments.html">
+                    <i class="fas fa-fw fa-rupee-sign"></i>
+                    <span>Payments and revenue</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="bookings.html">
+                    <i class="fas fa-fw fa-calendar-check"></i>
+                    <span>Bookings</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <span class="font-weight-bold text-gray-800 d-none d-sm-inline-block">Payments and revenue</span>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <span class="badge badge-danger badge-counter">3</span>
+                            </a>
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">3 hoardings awaiting review</h6>
+                                <a class="dropdown-item small" href="review-queue.html">NH-66 Bypass, Vyttila Side &mdash; paid, awaiting approval</a>
+                                <a class="dropdown-item small" href="review-queue.html">Beach Road, Kozhikode &mdash; paid, awaiting approval</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="review-queue.html">View review queue</a>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <h1 class="h3 mb-4 text-gray-800">Payments and revenue</h1>
+
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total listing fee revenue</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">&#8377;1,42,000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Booking payments this month</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">&#8377;8,94,500</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending listing fees</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">&#8377;4,000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-gray-800">Listing fee payments (vendor &rarr; admin)</h6></div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="text-xs text-uppercase text-gray-500">
+                                        <tr><th>Vendor</th><th>Hoarding</th><th>Amount</th><th>Razorpay payment ID</th><th>Date</th><th>Status</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ravi Outdoor Media</td><td>Edappally Flyover, Westbound</td><td>&#8377;1,000</td>
+                                            <td class="small text-muted">pay_NK7xQ2bL4mP9</td><td>12 Jun 2026</td>
+                                            <td><span class="badge badge-bf-paid">Paid</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ravi Outdoor Media</td><td>NH-66 Bypass, Vyttila Side</td><td>&#8377;1,000</td>
+                                            <td class="small text-muted">pay_NK8yR3cM5nQ1</td><td>18 Jun 2026</td>
+                                            <td><span class="badge badge-bf-paid">Paid</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Coastal Media Co.</td><td>Beach Road, Kozhikode</td><td>&#8377;1,000</td>
+                                            <td class="small text-muted">pay_NK9zS4dN6oR2</td><td>23 Jun 2026</td>
+                                            <td><span class="badge badge-bf-paid">Paid</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>South India Hoardings</td><td>Thrissur Round, East Side</td><td>&#8377;1,000</td>
+                                            <td class="small text-muted">&mdash;</td><td>&mdash;</td>
+                                            <td><span class="badge badge-bf-unpaid">Unpaid</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; 2026 BigFlex Admin Panel</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+</html>
